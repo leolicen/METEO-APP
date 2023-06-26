@@ -30,7 +30,7 @@
 </div>
 
 <div class="box-extra-info" *ngIf="extraInfo">
-  <div class="d-flex flex-row justify-content-evenly">
+  <div id="titoli-panoramica-ora" class="d-flex flex-row justify-content-evenly">
     <h4 class="cursore" (click)="mostraPanoramica()" [ngClass]="{'sbiadito': oraPerOraOn}">Panoramica</h4>
     <h4 class="cursore" (click)="mostraOraPerOra()" [ngClass]="{'sbiadito': panoramicaOn}">Ora per ora</h4>
   </div>

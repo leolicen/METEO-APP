@@ -10,7 +10,7 @@ body {
 .container-card {
   width: 100%;
   margin: 3em 0;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
   border-radius: 0.3em;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, auto));
@@ -81,6 +81,9 @@ body {
   margin-right: 0.2em;
 }
 
+#titoli-panoramica-ora {
+  margin-bottom: 2em;
+}
 
 /* PANORAMICA-METEO */
 

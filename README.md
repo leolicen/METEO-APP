@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
 
+<div style="display: flex; justify-content: space-evenly; align-items: center; width: fit-content">
+  <img src="img/screen%20app-meteo.png" style="width: 30%">
+  <img src="img/screen-meteo%202.png" style="width: 30%">
+  <img src="img/screen-meteo%203.png" style="width: 30%">
+</div>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
