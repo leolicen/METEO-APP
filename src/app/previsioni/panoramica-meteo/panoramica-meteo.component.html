@@ -1,0 +1,21 @@
+
+  <div class="panoramica-box">
+    <div>
+      <p>{{ giornoSingolo.data | date : "EEEE d MMMM" }}</p>
+      <img src="{{ giornoSingolo.giorno.condition.icon }}" />
+      <p>{{ giornoSingolo.giorno.condition.text }}</p>
+    </div>
+    <div>
+      <p class="max-temp">{{ giornoSingolo.giorno.maxTemp }}°</p>
+      <p class="min-temp">{{ giornoSingolo.giorno.minTemp }}°</p>
+      <p class="avg-temp">{{ giornoSingolo.giorno.avgTemp }}°</p>
+    </div>
+    <div>
+      <p>Umidità: {{ giornoSingolo.giorno.avgUmidita }}%</p>
+      <p>Vento: {{ giornoSingolo.giorno.maxWind }}km/h</p>
+      <p>
+        Probabilità di pioggia: {{ giornoSingolo.giorno.probabilitaPioggia }}%
+      </p>
+      <p>Tot. precipitazioni: {{ giornoSingolo.giorno.totPrecipitazioni }}mm</p>
+    </div>
+  </div>

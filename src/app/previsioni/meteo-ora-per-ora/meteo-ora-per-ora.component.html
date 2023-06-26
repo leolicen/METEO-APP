@@ -1,0 +1,24 @@
+
+<div class="meteo-ora-titoli">
+    <h4>Ora</h4>
+    <h4>Tempo</h4>
+    <h4>T°</h4>
+    <h4>Vento</h4>
+    <h4>Precip.</h4>
+    <h4>Prob.Pioggia</h4>
+    <h4>T° Perc.</h4>
+    <h4>Umidità</h4>
+</div>
+<div class="meteo-ora-dati" *ngFor="let ora of giornoSingolo.ore">
+  <p>{{giornoSingolo.ore.indexOf(ora)}}</p>
+  <div class="meteo-ora-condition">
+    <img src="{{ora.condition.icon}}">
+    <p>{{ora.condition.text}}</p>
+  </div>
+  <p>{{ora.temperatura}}°</p>
+  <p>{{ora.velocitaVento}}km/h</p>
+  <p>{{ora.totPrecipitazioni}}mm</p>
+  <p>{{ora.probabilitaPioggia}}%</p>
+  <p>{{ora.tempPercepita}}°</p>
+  <p>{{ora.umidita}}%</p>
+</div>

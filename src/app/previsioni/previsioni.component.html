@@ -1,0 +1,44 @@
+<h2>Previsioni</h2>
+<div class="mb-3 col-6">
+  <label for="citta" class="form-label">Cerca</label>
+  <input type="text"
+    class="form-control" id="citta" [(ngModel)]="citta" placeholder="Inserisci il nome di una città">
+
+  <button type="button" class="btn btn-primary mt-3" (click)="mostraPrev(citta)">Cerca</button>
+</div>
+
+<div class="row" *ngIf="meteo">
+  <div class="col-12">
+    <h3>{{meteo.location.name}}, {{meteo.location.region}} ({{meteo.location.country}}) - {{meteo.location.timezone}}</h3>
+  </div>
+</div>
+
+<div class="container-card" *ngIf="meteo">
+
+    <div class="card-singola" *ngFor="let g of meteo.previsioni" (click)="mostraExtra(g)">
+      <img class="card-immagine" src="{{g.giorno.condition.icon}}" alt="Title">
+      <div class="card-corpo">
+        <h6 class="card-title">{{g.data | date: 'EEEE d MMMM'}}</h6>
+        <div>
+          <span class="max-temp">{{g.giorno.maxTemp | number: '1.0-0'}}°</span>
+          <span class="min-temp">{{g.giorno.minTemp | number: '1.0-0'}}°</span>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+<div class="box-extra-info" *ngIf="extraInfo">
+  <div class="d-flex flex-row justify-content-evenly">
+    <h4 class="cursore" (click)="mostraPanoramica()" [ngClass]="{'sbiadito': oraPerOraOn}">Panoramica</h4>
+    <h4 class="cursore" (click)="mostraOraPerOra()" [ngClass]="{'sbiadito': panoramicaOn}">Ora per ora</h4>
+  </div>
+  <div>
+    <app-panoramica-meteo [giornoSingolo]="giornoSingolo" *ngIf="panoramicaOn"></app-panoramica-meteo>
+    <app-meteo-ora-per-ora [giornoSingolo]="giornoSingolo" *ngIf="oraPerOraOn"></app-meteo-ora-per-ora>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,24 @@
+<form #mioForm (ngSubmit)="onSubmit(mioForm)">
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Cognome</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matNativeControl type="email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Messaggio</mat-label>
+    <textarea matNativeControl></textarea>
+  </mat-form-field>
+  <section class="example-section">
+    <mat-checkbox class="example-margin">Termini e condizioni</mat-checkbox>
+    <mat-checkbox class="example-margin">Iscriviti alla newsletter</mat-checkbox>
+  </section>
+  <button type="submit" mat-button color="primary">Invia</button>
+
+</form>

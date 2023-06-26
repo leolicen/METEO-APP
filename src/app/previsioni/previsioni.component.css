@@ -1,0 +1,15 @@
+.sbiadito {
+  color: rgb(126, 123, 123);
+}
+
+.cursore {
+  cursor: pointer;
+}
+
+.box-extra-info {
+  border: 1px solid lightgray;
+  border-radius: 0.5em;
+  min-height: 10em;
+  margin: 3em auto;
+  margin-bottom: 5em;
+}

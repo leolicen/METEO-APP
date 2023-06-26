@@ -1,0 +1,29 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.example-section {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #4a4a4a;
+}
+
+.mat-mdc-checkbox label {
+  color: black;
+}
+
+
+.example-margin {
+  margin: 0 12px;
+
+}
+
+

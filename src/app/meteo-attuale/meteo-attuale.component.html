@@ -1,0 +1,35 @@
+<h2>Scopri che tempo fa in questo momento</h2>
+<div class="mb-3 col-6">
+  <label for="citta" class="form-label">Cerca</label>
+  <input
+    type="text"
+    class="form-control"
+    id="citta"
+    [(ngModel)]="citta"
+    placeholder="Inserisci il nome di una città"
+  />
+
+  <button
+    type="button"
+    class="btn btn-primary mt-3"
+    (click)="mostraAttuale(citta)"
+  >
+    Cerca
+  </button>
+</div>
+
+<h3 class="meteo-attuale-citta">{{meteo.location.name}}, {{meteo.location.region}} ({{meteo.location.country}}) - {{meteo.location.timezone}} </h3>
+
+<div *ngIf="meteo" class="meteo-attuale-box">
+  <div>
+    <p>{{ meteo.current.last_updated*1000 | date : 'dd/MM/yyyy - HH:mm' }}</p>
+    <img src="{{ meteo.current.condition.icon }}" />
+    <p>{{ meteo.current.condition.text }}</p>
+  </div>
+  <div>
+    <p>Temperatura: {{ meteo.current.temperatura }}C°</p>
+    <p>Temperatura percepita: {{ meteo.current.tempPerc }}C°</p>
+    <p>Umidità: {{ meteo.current.umidita }}%</p>
+    <p>Vento: {{ meteo.current.velocitaVento }}km/h</p>
+  </div>
+</div>
