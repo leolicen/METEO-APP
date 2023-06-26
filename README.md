@@ -1,5 +1,9 @@
 # METEOAPP
 
+Weather app coded with Angular as a small exercise project for a Front End Academy - App meteo creata con Angular come progetto di esercizio per una academy di sviluppo front end.
+
+App still under development - Applicazione ancora in fase di sviluppo.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
 
 <div style="display: flex; justify-content: space-evenly; align-items: center; width: fit-content">
