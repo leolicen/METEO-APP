@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit{
         if(this.img === this.img2){
           this.img = this.img1
         } else {
-          this.img = this.img2;
+          this.img = this.img2
         }
       }, 6000)
     }
