@@ -1,7 +1,12 @@
 
 
 <div class="img-container">
-  <img class="home-img" src="{{img}}">
+  <!-- <img class="home-img" src="{{img}}"> -->
+  <picture>
+    <source media="(min-width: 1000px)" srcset="{{imgXL}}" class="home-img">
+    <source media="(min-width: 700px)" srcset="{{imgS}}" class="home-img">
+    <img src="{{imgXS}}" class="home-img">
+  </picture>
 </div>
 
 
